@@ -55,30 +55,7 @@ pipeline {
                 env
                 """
             }
-            
         }
 
-        stage('Environment Analysis') {
-            parallel {
-                steps {
-                sh """
-                env
-                """
-            }
-        }
-
-        stage('Execute Shell') {
-            steps {
-                sh 'echo "Hello Student. Thanks for keeping up!"'
-            }
-        }
-            
-        stage('Print ENV variable') {
-            steps {
-                sh "echo ${APP_ENV}"
-            }
-        }
-            
     }   
-}
 }
